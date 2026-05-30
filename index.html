@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Zone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Welcome Page */
+#welcomePage{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to right,#000428,#004e92);
+    color:white;
+}
+
+#welcomePage h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+#welcomePage p{
+    font-size:20px;
+    margin-bottom:30px;
+    max-width:600px;
+}
+
+button{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e68900;
+}
+
+/* Watch List Page */
+#watchPage{
+    display:none;
+    padding:40px;
+}
+
+#watchPage h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.watch-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.watch-card{
+    width:250px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.watch-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.watch-card h3{
+    margin:15px 0;
+}
+
+.price{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Welcome Page -->
+<div id="welcomePage">
+    <h1>⌚ Watch Zone</h1>
+    <p>
+        Welcome to Watch Zone! Explore stylish and premium watches
+        from top brands like Casio, Titan, and Fastrack.
+        Click Get Started to view our collection.
+    </p>
+
+    <button onclick="showWatches()">Get Started</button>
+</div>
+
+<!-- Watch List Page -->
+<div id="watchPage">
+    <h2>Our Watch Collection</h2>
+
+    <div class="watch-container">
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="Casio Watch">
+            <h3>Casio Classic</h3>
+            <p class="price">₹2,499</p>
+        </div>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600" alt="Titan Watch">
+            <h3>Titan Premium</h3>
+            <p class="price">₹5,999</p>
+        </div>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600" alt="Fastrack Watch">
+            <h3>Fastrack Trendy</h3>
+            <p class="price">₹3,499</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function showWatches() {
+    document.getElementById("welcomePage").style.display = "none";
+    document.getElementById("watchPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
